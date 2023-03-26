@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Challenge Desktop Mobile</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: rgb(163, 205, 227);
+    }
+
+    /* Card 1 */
+    .container-empat {
+            width: 310px;
+            margin: 50px auto;
+            display: flex;
+        }
+
+        .card {
+            border: 1px solid #aaa;
+            border-radius: 12px;
+            background-color: #eee; 
+            overflow: hidden;
+            margin: 12px;
+            flex: 1;
+        }
+
+        .card .header {
+            height: 150px;
+            background-color: white;
+            height: 180px;
+        }
+
+        .card .content {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .card.gede-sist{
+          transform: scale(1.12);
+        }
+  </style>
+</head>
+<body>
+    <div class="container-empat">
+        <div class="card">
+          <br>
+          <img src="image-qr-code.png" style="width: 250px; display: block; margin: auto;">
+          <div class="header">
+          <div class="content">
+            <br>
+            <h2><bold>Improve your front-end skills by building projects</bold></h2>
+            <br>
+            <p></p>
+              <p style="font-size: 16px;">
+                Scan the QR code to visit Frontend<br> 
+                Mentor and take your coding skills to<br> 
+                the next level
+              </p>
+          </div>
+          </div>
+        </div>
+    </div>
+    <!-- Akhir Card 1 -->
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', function () {
+      nav.classList.toggle('slide');
+    });
+
+    document.querySelectorAll('.btn').forEach(buttonElement => {
+    const button = bootstrap.Button.getOrCreateInstance(buttonElement)
+    button.toggle()
+    })
+  </script>
+</body>
+</html>
